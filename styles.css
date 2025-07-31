@@ -107,6 +107,16 @@ header button:hover {
     height: 40px;
 }
 
+.home-button {
+    margin-left: 10px;
+    background-color: rgba(66, 133, 244, 0.1);
+    border: none;
+}
+
+.home-button:hover {
+    background-color: rgba(66, 133, 244, 0.2);
+}
+
 .header-button .button-text {
     font-size: 0.85rem;
     font-weight: 500;
@@ -1103,36 +1113,36 @@ textarea {
 } 
 
 /* Font Size Classes */
-.large-font .logo {
-    font-size: 1.8rem;
-}
-
-.larger-font .logo {
-    font-size: 2.1rem;
-}
-
-.largest-font .logo {
-    font-size: 2.4rem;
-}
-
 .large-font {
     font-size: 1.1rem;
 }
 
-.large-font .button-text {
-    font-size: 0.95rem;
+.large-font .logo {
+    font-size: 1.8rem;
 }
 
 .larger-font {
     font-size: 1.2rem;
 }
 
-.larger-font .button-text {
-    font-size: 1.05rem;
+.larger-font .logo {
+    font-size: 2.1rem;
 }
 
 .largest-font {
     font-size: 1.3rem;
+}
+
+.largest-font .logo {
+    font-size: 2.4rem;
+}
+
+.large-font .button-text {
+    font-size: 0.95rem;
+}
+
+.larger-font .button-text {
+    font-size: 1.05rem;
 }
 
 .largest-font .button-text {

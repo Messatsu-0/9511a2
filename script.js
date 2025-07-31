@@ -178,11 +178,27 @@ document.addEventListener('DOMContentLoaded', function() {
         button.addEventListener('click', navigateBack);
     });
 
+    // Home buttons
+    const homeButtons = document.querySelectorAll('.home-button');
+    homeButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            navigateTo('homepage');
+        });
+    });
+
     // Housing page interactions
     const repairsTopic = document.getElementById('repairs-topic');
     repairsTopic.addEventListener('click', function() {
         navigateTo('repairs-guide-page');
     });
+
+    // Shopping page interactions
+    const faultyProductsTopic = document.getElementById('faulty-products-topic');
+    if (faultyProductsTopic) {
+        faultyProductsTopic.addEventListener('click', function() {
+            navigateTo('faulty-products-guide-page');
+        });
+    }
 
     // Guide page interactions
     const readAloudButton = document.getElementById('read-aloud-button');
@@ -199,6 +215,36 @@ document.addEventListener('DOMContentLoaded', function() {
     downloadTemplateButton.addEventListener('click', function() {
         showSuccessMessage('Download started!');
     });
+
+    // Faulty Products Guide page interactions
+    const readAloudFaultyButton = document.getElementById('read-aloud-faulty-button');
+    if (readAloudFaultyButton) {
+        readAloudFaultyButton.addEventListener('click', function() {
+            showSuccessMessage('Reading content aloud...');
+        });
+    }
+
+    const saveFaultyGuideButton = document.getElementById('save-faulty-guide-button');
+    if (saveFaultyGuideButton) {
+        saveFaultyGuideButton.addEventListener('click', function() {
+            showSuccessMessage('Guide saved to your account!');
+        });
+    }
+
+    const downloadComplaintTemplateButton = document.getElementById('download-complaint-template-button');
+    if (downloadComplaintTemplateButton) {
+        downloadComplaintTemplateButton.addEventListener('click', function() {
+            showSuccessMessage('Complaint template download started!');
+        });
+    }
+    
+    // Account page interactions - Saved Guides
+    const faultyProductsSaved = document.getElementById('faulty-products-saved');
+    if (faultyProductsSaved) {
+        faultyProductsSaved.addEventListener('click', function() {
+            navigateTo('faulty-products-guide-page');
+        });
+    }
 
     // Community page interactions
     const volunteerOption = document.getElementById('volunteer-option');
@@ -292,13 +338,6 @@ document.addEventListener('DOMContentLoaded', function() {
     if (returnsTopicCard) {
         returnsTopicCard.addEventListener('click', function() {
             showSuccessMessage('Returns & Refunds guide coming soon!');
-        });
-    }
-
-    const faultyProductsTopicCard = document.getElementById('faulty-products-topic');
-    if (faultyProductsTopicCard) {
-        faultyProductsTopicCard.addEventListener('click', function() {
-            showSuccessMessage('Faulty Products & Warranty guide coming soon!');
         });
     }
 
